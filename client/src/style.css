@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #F9F5F6;
+
+}
+
+.app {
+    position: relative;
+    height: 99vh;
+    width: 99vw;
+    margin: auto;
+    background-image: linear-gradient(#F4EEFF, #DCD6F7);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.upperblock {
+
+    background-color: #393e50;
+    display: flex;
+    justify-content: space-between;
+    width: 85.35vw;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #F8E8EE;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    height: 45px;
+    align-items: center;
+    box-shadow: 3px 3px 10px 2px rgba(15, 15, 15, 0.2);
+
+}
+
+/* .upperblock h1 {
+    color: #F7FBFC;
+    margin-left: 50px;
+    font-family: 'Quicksand', sans-serif;
+} */
+.search {
+    height: 100%;
+    width: 20%;
+
+}
+
+.search input {
+    height: 75%;
+    width: 70%;
+    margin-left: 12px;
+    margin-top: 5px;
+    border: 1px solid aqua;
+    border-radius: 2px;
+}
+
+.search button {
+    height: 75%;
+
+}
+
+.upperblock h3 {
+    color: #30E3CA;
+    font-family: 'Caveat', cursive;
+}
+
+.upperButton {
+    display: flex;
+    height: 100%;
+    width: 14%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logOut {
+    color: #424874;
+    border-radius: 12px;
+    background-color: #F4EEFF;
+    width: 3.8rem;
+    height: 2rem;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.join {
+    color: white;
+    background-color: #0023b0;
+    border-radius: 12px;
+    width: 5.2rem;
+    height: 2rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-top: -0.8px;
+}
+
+.leftBlock {
+
+    position: relative;
+    background-color: #E2F0F0;
+    height: 85vh;
+    width: 20vw;
+    color: rgb(214, 214, 221);
+    border-left: 2px solid #71777b;
+    border-right: 2px solid rgb(55, 52, 52);
+}
+
+.chatsHeading {
+    background-color: #04777E;
+    width: 99.9%;
+    height: 6%;
+    border-bottom: 3px solid #3d4d57;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4px;
+    font-weight: 50;
+}
+
+.chatsHeading h1 {
+    font-size: 20px;
+    color: #ECF8F9;
+    margin-left: 8px;
+    font-family: 'Bad Script', cursive;
+}
+
+.dots {
+    position: relative;
+    text-align: center;
+    margin-right: 8px;
+    background: url("/images/3dots.png");
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 85%;
+    cursor: pointer;
+    width: 5%;
+}
+
+.contacts {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #bbe1e1;
+    width: 99.9%;
+    margin-bottom: 2px;
+    height: 8%;
+    cursor: pointer;
+}
+
+.contactname {
+    color: rgb(34, 32, 32);
+    font-size: 15px;
+    font-family: 'Shadows Into Light', cursive;
+    width: 80%;
+    height: 100%;
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 1.2s ease-in-out;
+}
+
+.contacts:hover {
+    background-color: #8fc4c4;
+    box-shadow: 1px -2px 1.5px 1px #87a8a8;
+}
+
+.avatar {
+    color: black;
+    height: 27px;
+    width: 30px;
+    border-radius: 15px;
+    border: 1px solid burlywood;
+    background-color: white;
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: 17px;
+    font-family: 'DM Sans', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.1s ease-in-out;
+}
+
+.avatar:hover {
+    height: 35px;
+    width: 38px;
+    border-radius: 18px;
+    font-size: 20px;
+    background-color: #ECF8F9;
+}
+
+.menu {
+    background-color: #04777E;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    height: 15%;
+    width: 35%;
+    opacity: 0;
+    right: 0;
+    z-index: -7;
+}
+
+.option {
+    border: 0.5px solid rgb(100, 99, 99);
+    height: 33.3%;
+    width: 100%;
+    color: #DAFFFB;
+    font-size: 1rem;
+    transition: all 0.5s ease-in-out;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.option:hover {
+    background-color: #525FE1;
+    color: #001C30;
+}
+
+/* following should be after clicking on the dots */
+/* .menu{
+    ..styles;
+    z-index = 7;
+    opacity = 1;
+} */
+.dotSelected {
+    background-color: #04777E;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    height: 15%;
+    width: 35%;
+    opacity: 1;
+    right: 0;
+    z-index: 7;
+}
+
+.rightBlock {
+    position: relative;
+    background-image: linear-gradient(#F9F7F7, #DBE2EF, #DEFCF9);
+    height: 85vh;
+    width: 65vw;
+    border-right: 1px solid grey;
+}
+
+.inputDiv {
+    width: 100%;
+    height: 8.5%;
+    background-color: #C9D6DF;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.inputDiv form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 70%;
+
+}
+
+#sendMessage {
+    height: 80%;
+    width: 85%;
+    border-radius: 5px;
+    box-shadow: 0.4px -0.3px 0.5px 0.2px rgb(163, 160, 160);
+}
+
+#sendButton {
+    height: 80%;
+    width: 10%;
+    margin-left: 1.4%;
+    background-color: rgb(196, 190, 190);
+}
+
+.chat {
+    display: inline;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.left {
+    background-color: #8696FE;
+    box-shadow: 0.5px -0.5px 1.5px 1px #a5aee8;
+    margin: 15px;
+    float: left;
+    clear: both;
+    z-index: 1;
+}
+
+.right {
+    background-color: #005C4B;
+    box-shadow: 0.5px -0.5px 1.5px 1px #3b897a;
+    float: right;
+    clear: both;
+    margin: 5px;
+}
+
+/* searchUser bar */
+.search {
+    width: 30%;
+}
