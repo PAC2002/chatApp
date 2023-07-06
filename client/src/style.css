@@ -10,6 +10,8 @@ body {
 
 }
 
+
+
 .app {
     position: relative;
     height: 99vh;
@@ -20,12 +22,11 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* min-height: 650px;
-    min-width: 950px; */
+    min-height: 650px;
+    min-width: 950px;
 }
 
 .upperblock {
-
     background-color: #393e50;
     display: flex;
     justify-content: space-between;
@@ -38,9 +39,8 @@ body {
     height: 45px;
     align-items: center;
     box-shadow: 3px 3px 10px 2px rgba(15, 15, 15, 0.2);
-    min-width: 850px;
-}
 
+}
 
 .search {
     height: 100%;
@@ -93,7 +93,7 @@ body {
 .container {
     display: flex;
     justify-content: center;
-    position: relative;
+    /* position: relative; */
     margin-top: 0.1px;
     min-width: 850px;
 }
@@ -128,7 +128,8 @@ body {
     font-size: 20px;
     color: #ECF8F9;
     margin-left: 8px;
-    font-family: 'Bad Script', cursive;
+    /* font-family: 'Bad Script', cursive; */
+    font-family: 'Montserrat', sans-serif;
 }
 
 
@@ -196,7 +197,7 @@ body {
     height: 85vh;
     width: 65vw;
     border-right: 1px solid grey;
-    overflow-y: auto;
+
 }
 
 .notOpened {
@@ -216,7 +217,7 @@ body {
     height: 90%;
     width: 100%;
     margin: auto;
-
+    overflow-y: auto;
 }
 
 .inputDiv {
@@ -304,6 +305,7 @@ body {
 .contactPerson h2 {
     margin-left: 36px;
     font-size: 1.8rem;
+    font-family: 'Poppins', sans-serif;
 }
 
 /* searchUser bar */

@@ -43,7 +43,7 @@ function LogIn() {
                     return navigate("/user/chat");
                 }
             } catch (error) {
-                console.log(error);
+                alert("something went wrong", error.message);
             }
 
         } else {

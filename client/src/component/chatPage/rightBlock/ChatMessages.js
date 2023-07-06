@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 
@@ -7,11 +8,12 @@ export const ChatMessages = ({ messages }) => {
 
 
     const { user } = ChatState();
+
     return (
         <>
             {messages && messages.map((m, i) => {
                 return (
-                    <>{(m.sentFrom._id === user._id) ? (<div key={i} className='chat right'>{m.content}</div>) : (<div className='chat left'>{m.content}</div>)}</>
+                    <>{(m.sentFrom._id === user._id) ? (<div key={i} className='chat right'>{m.content}</div>) : (<div className='chat left'>{m.content}</div>)} </>
                 )
             })}
         </>

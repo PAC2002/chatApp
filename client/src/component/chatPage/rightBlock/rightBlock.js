@@ -25,13 +25,7 @@ function RightBlock() {
     const { user, selectedChat } = ChatState();
 
 
-    const handleClickScroll = () => {
-        const element = document.getElementById('bottom');
-        if (element) {
-            return element.scrollIntoView({ behavior: 'smooth' });
-        }
-        return;
-    };
+
 
 
     useEffect(() => {
@@ -42,7 +36,7 @@ function RightBlock() {
         })
     })
     const sendMessage = async (e) => {
-        if (e.key === 'Enter' && newMessage) {
+        if ((e.key === 'Enter' && newMessage) || (e.target.value === 'submit' && newMessage)) {
 
             try {
                 const config = {
@@ -125,9 +119,7 @@ function RightBlock() {
         })
     })
 
-    useEffect(() => {
-        handleClickScroll();
-    }, [message])
+
     return (
         <>   {selectedChat ? (<div className='rightBlock'>
 
@@ -144,14 +136,14 @@ function RightBlock() {
                     <ChatMessages messages={message} />
 
                 </div>
-                    <div id='bottom' />
+
                 </>
             )}
 
             <div className='inputDiv'>
                 <FormControl onKeyDown={sendMessage} isRequired >
                     <Input type='text' name='message' id='sendMessage' placeholder='write your message' variant={'filled'} onChange={typingHandler} value={newMessage} />
-                    <Button type='submit' onClick={sendMessage} id='sendButton'>send</Button>
+                    <Button type='submit' value="submit" onClick={(e) => sendMessage(e)} id='sendButton'>send</Button>
                 </FormControl>
 
             </div>

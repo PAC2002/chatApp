@@ -65,7 +65,6 @@ function UpperBlock() {
             })
         }
     }
-
     const accessUserChat = async (userId) => {
         try {
             setLoadingChat(true);
@@ -95,14 +94,11 @@ function UpperBlock() {
 
         <div className='upperblock'>
             <div className="search">
-
-                <span><Button variant="ghost" onClick={onOpen} marginLeft={5} marginTop={1} backgroundColor={'red'}>Click Here to Search users</Button>
+                <span><Button variant="ghost" onClick={onOpen} marginLeft={5} marginTop={1} backgroundColor={'red'}> Search users here </Button>
                 </span>
             </div>
-
             <span> <h3>{user.username}</h3></span>
             <div className='upperButton'>
-
                 <Button type='submit' className='logOut' height="70%" onClick={(e) => Logoout(e)}>Log Out</Button>
             </div>
 

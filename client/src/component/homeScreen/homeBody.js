@@ -15,7 +15,7 @@ function Body() {
             </div>
             <div className='description'>
                 <p><h1>About The App</h1><br />
-                    This is an app that provides a person to have a real time chatting personally or in a group by having their credentials.
+                    This is an app that provides a person to have a real time chatting personally  by having their credentials.
                 </p>
             </div>
         </div>

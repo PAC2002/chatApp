@@ -3,7 +3,7 @@ function ChatsHeading() {
 
     return (<>
         <div className='chatsHeading'>
-            <h1>My Chat</h1>
+            <h1>My chat contacts</h1>
         </div>
     </>);
 }
