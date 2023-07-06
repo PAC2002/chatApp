@@ -6,7 +6,6 @@ import {
 } from "react-router-dom";
 
 function HomeScreen() {
-
   return (<>
     <div className='homeScreen'>
       <div className='navBar'>

@@ -38,6 +38,7 @@ function LogIn() {
                     return alert("Incorrect Credentials");
                 }
                 if (data.status === true) {
+
                     localStorage.setItem("chatapp-user", JSON.stringify(data));
                     return navigate("/user/chat");
                 }

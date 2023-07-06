@@ -20,6 +20,8 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    /* min-height: 650px;
+    min-width: 950px; */
 }
 
 .upperblock {
@@ -27,7 +29,7 @@ body {
     background-color: #393e50;
     display: flex;
     justify-content: space-between;
-    width: 85.35vw;
+    width: 89.1vw;
     margin-left: auto;
     margin-right: auto;
     border: 1px solid #F8E8EE;
@@ -36,32 +38,19 @@ body {
     height: 45px;
     align-items: center;
     box-shadow: 3px 3px 10px 2px rgba(15, 15, 15, 0.2);
-
+    min-width: 850px;
 }
 
-/* .upperblock h1 {
-    color: #F7FBFC;
-    margin-left: 50px;
-    font-family: 'Quicksand', sans-serif;
-} */
+
 .search {
     height: 100%;
     width: 20%;
 
 }
 
-.search input {
-    height: 75%;
-    width: 70%;
-    margin-left: 12px;
-    margin-top: 5px;
-    border: 1px solid aqua;
-    border-radius: 2px;
-}
-
 .search button {
-    height: 75%;
-
+    height: 72%;
+    color: #30E3CA;
 }
 
 .upperblock h3 {
@@ -73,7 +62,7 @@ body {
     display: flex;
     height: 100%;
     width: 14%;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
 }
 
@@ -81,11 +70,12 @@ body {
     color: #424874;
     border-radius: 12px;
     background-color: #F4EEFF;
-    width: 3.8rem;
+    width: 4.8rem;
     height: 2rem;
     font-family: 'Montserrat', sans-serif;
     cursor: pointer;
     margin-right: 10px;
+    font-size: 15px;
 }
 
 .join {
@@ -104,7 +94,8 @@ body {
     display: flex;
     justify-content: center;
     position: relative;
-    margin-top: -0.8px;
+    margin-top: 0.1px;
+    min-width: 850px;
 }
 
 .leftBlock {
@@ -112,10 +103,11 @@ body {
     position: relative;
     background-color: #E2F0F0;
     height: 85vh;
-    width: 20vw;
+    width: 24vw;
     color: rgb(214, 214, 221);
     border-left: 2px solid #71777b;
     border-right: 2px solid rgb(55, 52, 52);
+    overflow-y: auto;
 }
 
 .chatsHeading {
@@ -130,6 +122,8 @@ body {
     font-weight: 50;
 }
 
+
+
 .chatsHeading h1 {
     font-size: 20px;
     color: #ECF8F9;
@@ -137,18 +131,7 @@ body {
     font-family: 'Bad Script', cursive;
 }
 
-.dots {
-    position: relative;
-    text-align: center;
-    margin-right: 8px;
-    background: url("/images/3dots.png");
-    background-position: center;
-    background-size: 100%;
-    background-repeat: no-repeat;
-    height: 85%;
-    cursor: pointer;
-    width: 5%;
-}
+
 
 .contacts {
     display: flex;
@@ -159,6 +142,7 @@ body {
     margin-bottom: 2px;
     height: 8%;
     cursor: pointer;
+
 }
 
 .contactname {
@@ -205,51 +189,6 @@ body {
     background-color: #ECF8F9;
 }
 
-.menu {
-    background-color: #04777E;
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    height: 15%;
-    width: 35%;
-    opacity: 0;
-    right: 0;
-    z-index: -7;
-}
-
-.option {
-    border: 0.5px solid rgb(100, 99, 99);
-    height: 33.3%;
-    width: 100%;
-    color: #DAFFFB;
-    font-size: 1rem;
-    transition: all 0.5s ease-in-out;
-    opacity: 1;
-    cursor: pointer;
-}
-
-.option:hover {
-    background-color: #525FE1;
-    color: #001C30;
-}
-
-/* following should be after clicking on the dots */
-/* .menu{
-    ..styles;
-    z-index = 7;
-    opacity = 1;
-} */
-.dotSelected {
-    background-color: #04777E;
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    height: 15%;
-    width: 35%;
-    opacity: 1;
-    right: 0;
-    z-index: 7;
-}
 
 .rightBlock {
     position: relative;
@@ -257,16 +196,40 @@ body {
     height: 85vh;
     width: 65vw;
     border-right: 1px solid grey;
+    overflow-y: auto;
+}
+
+.notOpened {
+    position: relative;
+    background-image: linear-gradient(#F9F7F7, #DBE2EF, #DEFCF9);
+    height: 85vh;
+    width: 65vw;
+    border-right: 1px solid grey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: x-large;
+}
+
+.messages {
+    height: 90%;
+    width: 100%;
+    margin: auto;
+
 }
 
 .inputDiv {
     width: 100%;
     height: 8.5%;
     background-color: #C9D6DF;
-    position: absolute;
-    bottom: 0;
     display: flex;
     justify-content: center;
+    position: -webkit-sticky;
+    /* Safari */
+
+    position: sticky;
+    bottom: 0;
 }
 
 .inputDiv form {
@@ -283,6 +246,7 @@ body {
     width: 85%;
     border-radius: 5px;
     box-shadow: 0.4px -0.3px 0.5px 0.2px rgb(163, 160, 160);
+
 }
 
 #sendButton {
@@ -290,6 +254,8 @@ body {
     width: 10%;
     margin-left: 1.4%;
     background-color: rgb(196, 190, 190);
+    margin-bottom: 4.5px;
+    font-size: medium;
 }
 
 .chat {
@@ -302,23 +268,46 @@ body {
 }
 
 .left {
+
     background-color: #8696FE;
     box-shadow: 0.5px -0.5px 1.5px 1px #a5aee8;
     margin: 15px;
     float: left;
     clear: both;
-    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
 }
+
+
 
 .right {
     background-color: #005C4B;
     box-shadow: 0.5px -0.5px 1.5px 1px #3b897a;
     float: right;
     clear: both;
-    margin: 5px;
+    margin: 5px 20px 5px 5px;
+}
+
+.contactPerson {
+    width: 100%;
+    height: 7%;
+    background-image: linear-gradient(rgb(82, 82, 168), aqua);
+    position: -webkit-sticky;
+    /* Safari */
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.contactPerson h2 {
+    margin-left: 36px;
+    font-size: 1.8rem;
 }
 
 /* searchUser bar */
 .search {
-    width: 30%;
+    width: 20%;
+    height: 100%;
 }

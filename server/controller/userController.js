@@ -15,7 +15,7 @@ const allUser = asyncHandler(async (req, res) => {
     res.send(users);
 });
 
-
+// registration
 const UserRegister = asyncHandler(async (req, res, next) => {
     const { email, username, password, pic } = req.body;
     if (!username || !email || !password) {

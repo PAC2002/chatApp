@@ -10,6 +10,12 @@
     border-radius: 7px;
 }
 
+.inputDivSample {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
 .navBar {
     position: absolute;
     top: 0;
@@ -151,14 +157,7 @@ ul {
     margin-left: 40px;
 }
 
-.description:hover {
-    height: 63vh;
-    width: 47vw;
-    border-radius: 7px;
-    padding-top: 29px;
-    box-shadow: 1px -0.7px 1px 1px #edeeee;
-    text-align: center;
-}
+
 
 .inputDiv {
     width: 100%;

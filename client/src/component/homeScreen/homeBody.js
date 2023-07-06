@@ -6,10 +6,10 @@ function Body() {
             <div className='sampleChat'>
                 <div className='chat sample left'>Hey! How are you?</div>
                 <div className='chat sample right'>Not bad. What about you?</div>
-                <div className='inputDiv'>
+                <div className='inputDivSample'>
                     <form action='#' >
                         <input type='text' name='message' id='sendMessage' placeholder='write your message' autoComplete='off' />
-                        <button type='submit' id='sendButton'>send</button>
+                        <button id='sendButton' onClick={(e) => { e.preventDefault() }}>send</button>
                     </form>
                 </div>
             </div>

@@ -12,20 +12,17 @@ import LogIn from "./AuthentiCation/LogIn/login";
 import Register from "./AuthentiCation/Register/register";
 import ChatScreen from "./chatPage/chatScreen";
 import "../style.css";
-import ChatProvider from "../context/ChatProvidercontext";
+
 function App() {
   return (<>
     <Router>
-
       <Routes>
         <Route exact path="/" element={<HomeScreen />}>
           <Route exact path="" element={<Body />} />
           <Route exact path="user/login" element={<LogIn />} />
           <Route exact path="user/register" element={<Register />} />
         </Route>
-
         <Route exact path="/user/chat" element={<ChatScreen />} />
-
       </Routes>
 
     </Router>
